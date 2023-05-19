@@ -1,0 +1,18 @@
+{
+    "files.associations": {
+        "*.tcc": "c",
+        "string": "c",
+        "istream": "c",
+        "streambuf": "c",
+        "functional": "c",
+        "type_traits": "c",
+        "mutex": "c",
+        "ostream": "c",
+        "stop_token": "c",
+        "typeinfo": "c",
+        "*.inc": "c",
+        "signal.h": "c",
+        "fcntl.h": "c",
+        "stdlib.h": "c"
+    }
+}
