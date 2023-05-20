@@ -41,6 +41,7 @@ int main(int argc, char** argv) {
     if (argc == 4) {
         delay = atof(argv[3]);
         sleep_time = delay * 1000000;
+        printf("delay: %f\n", sleep_time);
     }
     printf("client: %d with delay: %f\n", client_id, sleep_time/1000000);
     struct sockaddr_un sockaddr;
@@ -67,13 +68,12 @@ int main(int argc, char** argv) {
         usleep(sleep_time);
         write(sock_fd, send_buf, strlen(send_buf));
         read(sock_fd, recv_buf, MAX_READ);
-        // printf("recv: %s\n", recv_buf);
     }
 
     time_t t1 = time(0);
 
     double time_in_seconds = difftime(t1, t0);
-    printf("sum delay: %f\n", delay*nums_count);
+    printf("client time: %f\n", time_in_seconds);
     close(sock_fd);
 
     return 0;
