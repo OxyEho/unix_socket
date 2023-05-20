@@ -40,7 +40,7 @@ int main(int argc, char** argv) {
     if (argc == 4) {
         sleep_time = atof(argv[3]) * 1000000;
     }
-    printf("client: %d with delay: %f\n", client_id, sleep_time);
+    printf("client: %d with delay: %f\n", client_id, sleep_time/1000000);
     struct sockaddr_un sockaddr;
     memset(&sockaddr, 0, sizeof(struct sockaddr_un));
     int sock_fd = socket(AF_UNIX, SOCK_STREAM, 0);
